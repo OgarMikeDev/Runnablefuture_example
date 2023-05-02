@@ -25,7 +25,7 @@ public class ResultCheckerExample implements Runnable {
                 if (future.isDone()) {
                     completedTask++;
                     try {
-                        System.out.println("Выполнена " + future.get());
+                        System.out.println("Completed " + future.get());
                         futureIterator.remove();
                     } catch (InterruptedException | ExecutionException e) {
                         throw new RuntimeException(e);
@@ -35,7 +35,7 @@ public class ResultCheckerExample implements Runnable {
                 if (completedTask == 2) {
                     completedTask++;
                     future.cancel(true);
-                    System.out.println("Задача остановлена, результат её работы не требуется");
+                    System.out.println("The task is stopped, the result of its work is not required");
                 }
             }
         }

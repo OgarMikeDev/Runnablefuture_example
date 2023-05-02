@@ -1,6 +1,6 @@
 package runnable_example;
 
-public class RunnableExample implements Runnable{
+public class RunnableExample implements Runnable {
 
     private final Integer timeToCompute;
 
@@ -10,7 +10,7 @@ public class RunnableExample implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Работа займет: " + timeToCompute + " миллисекунд");
+        System.out.println("The work will take: " + timeToCompute + " milliseconds");
         try {
             Thread.sleep(timeToCompute);
         } catch (InterruptedException e) {
